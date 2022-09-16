@@ -1,5 +1,5 @@
 package collections.idea.Q5;
-
+/////////
 import java.util.*;
 
 public class Question5 {
