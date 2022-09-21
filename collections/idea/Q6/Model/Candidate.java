@@ -1,7 +1,6 @@
-package collections.idea.Q6;
+package collections.idea.Q6.Model;
 
 public class Candidate {
-
     private int candidateId;
     private String name;
     private String area;
@@ -44,15 +43,5 @@ public class Candidate {
 
     public void setVotes(int votes) {
         this.votes = votes;
-    }
-
-    @Override
-    public String toString() {
-        return "Candidate{" +
-                "candidateId=" + candidateId +
-                ", name='" + name + '\'' +
-                ", area='" + area + '\'' +
-                ", votes=" + votes +
-                '}';
     }
 }

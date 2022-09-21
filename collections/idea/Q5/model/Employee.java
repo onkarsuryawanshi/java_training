@@ -1,4 +1,4 @@
-package collections.idea.Q5;
+package collections.idea.Q5.model;
 
 public class Employee {
     private int empId;
@@ -43,15 +43,5 @@ public class Employee {
 
     public void setEmpSalary(int empSalary) {
         this.empSalary = empSalary;
-    }
-
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "empId=" + empId +
-                ", name='" + name + '\'' +
-                ", department='" + department + '\'' +
-                ", empSalary=" + empSalary +
-                '}';
     }
 }
