@@ -6,19 +6,6 @@ public class LinkedList {
 
     Node head;
 
-
-    static class Node {
-
-        int data;
-        Node next;
-
-
-        Node(int d) {
-            data = d;
-            next = null;
-        }
-    }
-
     // Method to insert a new node
     public static LinkedList insert(LinkedList list, int data) {
         // Create a new node with given data
@@ -58,6 +45,18 @@ public class LinkedList {
 
             // Go to next node
             currNode = currNode.next;
+        }
+    }
+
+    static class Node {
+
+        int data;
+        Node next;
+
+
+        Node(int d) {
+            data = d;
+            next = null;
         }
     }
 }
