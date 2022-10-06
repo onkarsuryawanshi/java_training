@@ -1,0 +1,72 @@
+        Map<String, Set<Map<String, String>>> mapSoftwareAndVersion = new HashMap<>();
+        Map<String, String> map = new HashMap<>();
+
+        Set<String> softwareSet = softwareList.stream().map(e -> e.getSoftware()).collect(Collectors.toSet());
+        for (String currSoftware : softwareSet) {
+            Set<String> setVersion = new HashSet<>();
+            Set<String> sortedVersion = new HashSet<>();
+            TreeSet<String> treeSet = new TreeSet<>();
+            Map<String, String> conOriginalMap = new HashMap<>();
+            for (Software software : softwareList) {
+                if (currSoftware.equals(software.getSoftware())) {
+                    setVersion.add(software.getVersion());
+                }
+                Set<String> convertedSet = setVersion.stream().map(e -> new VersionConverter().getConvertedVersion(e)).collect(Collectors.toSet());
+                for (String set : setVersion) {
+                    conOriginalMap.put(new VersionConverter().getConvertedVersion(set), set);
+                }
+//                for (String version : setVersion) {
+//                    String updatedVersion = new VersionConverter().getConvertedVersion(version);
+//                    map.put(updatedVersion, version);
+//
+//                }
+                treeSet = new TreeSet<String>(conOriginalMap.keySet());
+
+                System.out.println(treeSet);
+//                mapSoftwareAndVersion.put(currSoftware,treeSet);
+
+            }
+
+//
+//            Set<String> sortedversion = new HashSet<>();
+//            for (String sortV:treeSet) {
+//               sortedversion.add(map.get(sortV));
+//            }
+//
+//            mapSoftwareAndVersion.put(currSoftware, treeSet);
+//            System.out.println(mapSoftwareAndVersion);
+//        }
+//        for (String name:mapSoftwareAndVersion.keySet()) {
+//            for (String version1: mapSoftwareAndVersion.get(name)) {
+//                System.out.println(map.get(version1));
+//            };
+//
+//        }
+//        System.out.println(map);
+
+            //        // using for-each loop for iteration over Map.entrySet()
+//        Set<String> sortedAndFormated = new HashSet<>();
+//        String software = null;
+//        String version = null;
+////        for (String name : mapSoftwareAndVersion.keySet())
+////        {
+////            software = name;
+////            version = mapSoftwareAndVersion.get(name).toString();
+////            System.out.println(version+""+software);
+////            System.out.println(map.get(version));
+//////            map.get(version);
+////
+////        }
+////
+////        System.out.println(software+""+version);
+//        Set<String> currSet = new HashSet<>();
+//        for (Map.Entry<String, Set<String>> entry : mapSoftwareAndVersion.entrySet())
+//            for (String values : entry.getValue()) {
+////                currSet.put(map.get(values));
+//                currSet.add(map.get)
+//            }
+
+            ///get the key and replace the set with the set created here
+//        mapSoftwareAndVersion.put()
+//        sortedAndFormated = new HashSet<>();
+        }
